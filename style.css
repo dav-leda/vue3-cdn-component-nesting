@@ -1,0 +1,33 @@
+
+body {
+  font-family: Ubuntu, sans-serif;
+  margin: 4rem;
+  background-color: snow;
+}
+
+nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: darkgreen;
+}
+
+nav > div {
+  float: left;
+}
+
+nav > div > p {
+  margin: 1rem;
+  display: block;
+  font-weight: bold;
+  color: snow;
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav > div > p:hover {
+  background-color: #111;
+}
