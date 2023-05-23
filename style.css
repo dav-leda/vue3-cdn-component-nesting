@@ -31,3 +31,8 @@ nav > div > p {
 nav > div > p:hover {
   background-color: green;
 }
+
+h2 {
+  margin-top: 5rem;
+  text-align: center;
+}

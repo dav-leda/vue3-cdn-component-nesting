@@ -1,20 +1,61 @@
 
 
+import HomePage from './HomePage.js'
+import AboutPage from './AboutPage.js'
+import ContactPage from './ContactPage.js'
+
 export default {
 
-  template: `
+  components: {
+    HomePage, AboutPage, ContactPage
+  },
 
-  <nav>
-    <div>
-      <p>Item 1</p>
-    </div>
-    <div>
-      <p>Item 2</p>
-    </div>
-    <div>
-      <p>Item 3</p>
-    </div>
-  </nav>
-  
+  props: {
+    pages: Object
+  },
+
+  data: () => ({
+    showPages: {
+      home: true,
+      about: false,
+      contact: false
+    }
+  }),
+
+  methods: {
+    showPage(page) {
+      Object.keys(this.showPages)
+        .forEach(key => 
+          this.showPages[key] = false)
+
+      this.showPages[page] = true
+    }
+  },
+
+  // Para el resaltado de sintaxis de templates literales
+  // usar la extensión es6-string-html para VS Code
+
+  template: /*html*/ `
+
+    <nav>
+
+      <div @click="showPage('home')">
+        <p>{{ pages['home'] }}</p>
+      </div>
+
+      <div @click="showPage('about')">
+        <p>{{ pages['about'] }}</p>
+      </div>
+      
+      <div @click="showPage('contact')">
+        <p>{{ pages['contact'] }}</p>
+      </div>
+
+    </nav>
+
+    <home-page v-show="showPages['home']"/>   
+    <about-page v-show="showPages['about']"/>
+    <contact-page v-show="showPages['contact']"/>
+
   `
 }
