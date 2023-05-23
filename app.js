@@ -1,15 +1,12 @@
 
-import ComponenteUno from './components/componenteUno.js'
+import NavBar from './components/NavBar.js'
 
-const { createApp } = Vue
-
-createApp({
+export default {
 
   components: {
-    ComponenteUno
+    NavBar
   }
-
-}).mount('#app')
+}
 
 
 

@@ -29,5 +29,5 @@ nav > div > p {
 }
 
 nav > div > p:hover {
-  background-color: #111;
+  background-color: green;
 }
