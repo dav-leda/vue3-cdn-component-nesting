@@ -33,7 +33,8 @@ export default {
   },
 
   // Para el resaltado de sintaxis de templates literales
-  // usar la extensión es6-string-html para VS Code
+  // usar la extensión Inline HTML para VS Code
+  // para que funcione hay que agregar /*html*/ antes del backtick
 
   template: /*html*/ `
 
