@@ -10,7 +10,7 @@ export default {
       <br>
       <p>
 
-        A diferencia de otros frameworks de frontend como <strong>Svelte</strong>,
+        A diferencia de otros frameworks de frontend como Angular o Svelte,
         Vue puede ser usado sin necesidad de un <a 
         href="https://sergiodxa.com/articles/que-es-un-bundler-de-js" target="_blank"
         >bundler</a>, simplemente cargando la librería (o, mejor dicho, biblioteca)
@@ -22,51 +22,56 @@ export default {
         mientras que Vue no requiere ningún paso previo de compilación.
         <br><br>
         Sin embargo, cuando estamos usando distintos componentes en nuestra app de Vue
-        lo más recomendable es usar un script con <strong>type="module"</strong> y el atributo <strong>defer</strong>:
+        lo más recomendable es no cargar la librería de Vue (perdón, biblioteca 🤷‍♂️️) en el archivo html.
+        La que se recomienda para esto <a href="https://vuejs.org/guide/quick-start.html#using-vue-from-cdn" target="_blank">en el sitio oficial de Vue</a>
+        es usar un script con <strong>type="module"</strong> y el atributo <strong>defer</strong> dentro del <strong>head</strong>:
 
         <pre>
-
 &lt;script type="module" src="main.js" defer&gt;&lt;/script&gt;
         </pre>
-        Y dentro del archivo main.js cargar la librería (perdón, biblioteca 🤷‍♂️️) de esta forma:
+
+        Usar el atributo <strong>defer</strong> en el <strong>head</strong> es mucho mejor que poner el
+        script al final del <strong>body</strong> porque <strong>defer</strong> permite que el script 
+        sea cargado en paralelo al html, siendo ejecutado únicamente luego de que el html se renderiza,
+        mientras que al poner el script al final del body el script es cargado recién
+        cuando el html termina de renderizar.
+        <br><br>
+
+        Luego, dentro del archivo <strong>main.js</strong> es posible cargar la biblioteca de esta forma:
 
         <pre>
-
 import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 import App from './app.js'
 createApp(App).mount('#app')
         </pre>
-
+        (Fíjense que es la versión <strong>vue.esm-browser</strong> no la versión <strong>vue.global</strong>).
+        <br><br>
         Esto nos permite aprovechar el sistema de 
         <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Modules" target="_blank">módulos de JavaScript</a>
-        disponible en todos los browsers actuales. De esta forma, cada componente de Vue 
-        puede ser creado como un módulo aparte y luego importado dentro del componente principal,
-        que por convención suele ser llamado App, como en el ejemplo de acá arriba.
+        disponible en todos los browsers actuales. De esta forma cada componente de Vue 
+        puede ser creado como un módulo aparte y luego importado dentro del componente principal
+        (que por convención suele ser llamado App) como en el ejemplo de acá arriba.
         <br><br>
-        De esta forma se pueden crear componentes sin necesidad de usar el método
+        Y así se pueden crear componentes sin necesidad de usar el método
         <strong>createApp</strong> para definirlos, simplemente se crea un objeto exportable
-        con cada una de las <strong>options</strong> de Vue:
+        con las distintas <strong>options</strong> de Vue (data, methods, computed, etc):
 
         <pre>
-
+// App.js
 import NavBar from './components/NavBar.js'
-
 export default {
-
   components: {
     NavBar
   },
-
   data: () => ({
     pages: [
       { title: 'Vue CDN', show: true },
+      { title: 'Contacto', show: false },
       { title: 'Props', show: false },
-      { title: 'Componentes', show: false },
-      { title: 'Inline HTML', show: false }
+      { title: 'Router', show: false }
     ]
   }),
 }
-
         </pre>
         
 

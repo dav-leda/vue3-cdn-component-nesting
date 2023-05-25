@@ -2,8 +2,8 @@
 
 import HomePage from './HomePage.js'
 import PropsPage from './PropsPage.js'
-import ComponentesPage from './ComponentesPage.js'
-import InlinePage from './InlinePage.js'
+import RouterPage from './RouterPage.js'
+import ContactPage from './ContactPage.js'
 import ModoDark from './ModoDark.js'
 
 export default {
@@ -11,8 +11,8 @@ export default {
   components: {
     HomePage, 
     PropsPage, 
-    ComponentesPage,
-    InlinePage,
+    RouterPage,
+    ContactPage,
     ModoDark
   },
 
@@ -35,9 +35,6 @@ export default {
       ).show
     }
   },
-
-
-
   // Para el resaltado de sintaxis de templates literales
   // usar la extensión Inline HTML para VS Code
   // para que funcione hay que agregar /*html*/ antes del backtick
@@ -45,32 +42,18 @@ export default {
   template: /*html*/ `
 
     <nav>
-
-      
       <h3 
-      v-for="page in pages" :key="page"
-      @click="showPage(page.title)"
+        v-for="page in pages" :key="page"
+        @click="showPage(page.title)"
       > {{ page.title }} </h3>
-      
       
       <modo-dark/>
     </nav>
 
     <home-page v-show="isShown('Vue CDN')"/>   
-    <componentes-page v-show="isShown('Componentes')"/>
+    <router-page v-show="isShown('Router')"/>
     <props-page v-show="isShown('Props')"/>
-
+    <contact-page v-show="isShown('Contacto')"/>
 
   `
 }
-
-
-
-
-// showPage(page) {
-//   Object.keys(this.showPages)
-//     .forEach(key => 
-//       this.showPages[key] = false)
-
-//   this.showPages[page] = true
-// }

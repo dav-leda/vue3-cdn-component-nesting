@@ -62,7 +62,7 @@ select {
 }
 
 body {
-  font-family: Ubuntu, sans-serif;
+  font-family: Ubuntu, Helvetica, Arial, sans-serif;
   background-color: var(--bg-color);
   color: var(--font-color);
   font-size: calc(1rem + 0.25vh);
@@ -94,7 +94,7 @@ a:hover {
 
 section {
   max-width: calc(var(--font-size) * 20);
-  margin: 3rem auto;
+  margin: 10rem auto;
 }
 
 article {
@@ -111,11 +111,14 @@ nav {
   padding: 0;
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
 }
 
 nav > h3 {
-  font-size: var(--font-size);
-  margin: 0.5rem 1rem 0.5rem 0.5rem;
+  font-size: calc(var(--font-size) * 0.8);
+  margin: 1rem calc(var(--font-size) * 0.2);
   font-weight: bold;
   text-align: center;
   padding: 1rem;
@@ -128,6 +131,7 @@ nav > h3 {
 
 nav > h3:first-of-type {
   float: left;
+  font-size: var(--font-size)
 }
 
 
@@ -136,6 +140,12 @@ nav > h3:hover {
   text-decoration: underline;
 }
 
+pre {
+  background-color: rgba(0,0,0,0.05);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 5px;
+}
 
 .modo-dark {
   display: flex;
@@ -145,7 +155,7 @@ nav > h3:hover {
 
 
 .modo-dark span {
-  margin: 1.5rem calc(var(--font-size) * 0.5);
+  margin: 1.8rem calc(var(--font-size) * 0.5);
   font-size: var(--font-size);
 }
 

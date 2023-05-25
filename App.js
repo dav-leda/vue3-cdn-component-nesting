@@ -10,8 +10,9 @@ export default {
   data: () => ({
     pages: [
       { title: 'Vue CDN', show: true },
+      { title: 'Contacto', show: false },
       { title: 'Props', show: false },
-      { title: 'Componentes', show: false }
+      { title: 'Router', show: false }
     ]
   }),
 }
