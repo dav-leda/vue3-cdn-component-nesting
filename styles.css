@@ -118,20 +118,22 @@ nav {
 
 nav > h3 {
   font-size: calc(var(--font-size) * 0.8);
-  margin: 1rem calc(var(--font-size) * 0.2);
+  margin: 2.3rem 0;
   font-weight: bold;
   text-align: center;
-  padding: 1rem;
+  padding-right: calc(var(--font-size) * 2);
   text-decoration: none;
   cursor: pointer;
   float: right;
   opacity: 0.9;
+
   
 }
 
 nav > h3:first-of-type {
   float: left;
-  font-size: var(--font-size)
+  font-size: var(--font-size);
+  padding-left: calc(var(--font-size) * 2);
 }
 
 
@@ -151,11 +153,12 @@ pre {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding-right: 1.8rem;
 }
 
 
 .modo-dark span {
-  margin: 1.8rem calc(var(--font-size) * 0.5);
+  margin: 2.2rem calc(var(--font-size) * 0.4);
   font-size: var(--font-size);
 }
 
