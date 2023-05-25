@@ -11,7 +11,7 @@ export default {
       <br>
       <p>
 
-        Como pueden la <strong>nav bar</strong> de esta app funciona como un router para 
+        Como pueden ver, la <strong>nav bar</strong> de esta app funciona como un router para 
         <a href="https://es.wikipedia.org/wiki/Single-page_application" target="_blank">SPA</a>
         ya que permite mostrar las distintas vistas clickeando en los links sin necesidad de usar tags de tipo <strong>&lt;a href=""&gt; </strong> 
         que por defecto generan una llamada al servidor y la carga de una nueva página. En este caso lo único que hacen los links es disparar un método que cambia el valor de la propiedad booleana <strong>show</strong>
