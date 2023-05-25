@@ -43,7 +43,7 @@ export default {
 
     <nav>
       <h3 
-        v-for="page in pages" :key="page"
+        v-for="page in pages" :key="page.title"
         @click="showPage(page.title)"
       > {{ page.title }} </h3>
       

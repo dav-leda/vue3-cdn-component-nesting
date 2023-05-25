@@ -57,8 +57,8 @@ createApp(App).mount('#app')
         con las distintas <strong>options</strong> de Vue (data, methods, computed, etc):
 
         <pre>
-// App.js
-import NavBar from './components/NavBar.js'
+// app.js
+import NavBar from './components/navBar.js'
 export default {
   components: {
     NavBar
@@ -73,8 +73,16 @@ export default {
   }),
 }
         </pre>
-        
 
+      Así es como está hecha esta misma app: en el método <strong>data</strong> del archivo <strong>app.js</strong> cada uno de los objetos en el array <strong>pages</strong>
+      se corresponde con cada una de las vistas.
+      <br><br>        
+      De todas formas, el hecho de que Vue pueda ser usado sin un bundler 
+      <strong>no significa que siempre deba ser usado sin un bundler</strong>.
+      <br><br>
+      De hecho, la forma más usual de usar Vue es que con un bundler. 
+      El que se suele usar es <a href="https://esbuild.github.io/" target="_blank">esbuild</a>
+      que ya viene incorporado al crear una app de Vue con <a href="https://vitejs.dev/" target="_blank">Vite</a>.
       </p>
     </section>  
   `
