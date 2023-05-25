@@ -1,36 +1,42 @@
 
 
 import HomePage from './HomePage.js'
-import AboutPage from './AboutPage.js'
-import ContactPage from './ContactPage.js'
+import PropsPage from './PropsPage.js'
+import ComponentesPage from './ComponentesPage.js'
+import InlinePage from './InlinePage.js'
+import ModoDark from './ModoDark.js'
 
 export default {
 
   components: {
-    HomePage, AboutPage, ContactPage
+    HomePage, 
+    PropsPage, 
+    ComponentesPage,
+    InlinePage,
+    ModoDark
   },
 
   props: {
-    pages: Object
+    pages: Array
   },
 
-  data: () => ({
-    showPages: {
-      home: true,
-      about: false,
-      contact: false
-    }
-  }),
 
   methods: {
-    showPage(page) {
-      Object.keys(this.showPages)
-        .forEach(key => 
-          this.showPages[key] = false)
-
-      this.showPages[page] = true
+    showPage(title) {
+      this.pages.forEach( page => 
+        page.show = page.title === title 
+      )
+    },
+    isShown(title) {
+      return (
+        this.pages.find(page => 
+          page.title === title
+        )
+      ).show
     }
   },
+
+
 
   // Para el resaltado de sintaxis de templates literales
   // usar la extensión Inline HTML para VS Code
@@ -40,23 +46,31 @@ export default {
 
     <nav>
 
-      <div @click="showPage('home')">
-        <p>{{ pages['home'] }}</p>
-      </div>
-
-      <div @click="showPage('about')">
-        <p>{{ pages['about'] }}</p>
-      </div>
       
-      <div @click="showPage('contact')">
-        <p>{{ pages['contact'] }}</p>
-      </div>
-
+      <h3 
+      v-for="page in pages" :key="page"
+      @click="showPage(page.title)"
+      > {{ page.title }} </h3>
+      
+      
+      <modo-dark/>
     </nav>
 
-    <home-page v-show="showPages['home']"/>   
-    <about-page v-show="showPages['about']"/>
-    <contact-page v-show="showPages['contact']"/>
+    <home-page v-show="isShown('Vue CDN')"/>   
+    <componentes-page v-show="isShown('Componentes')"/>
+    <props-page v-show="isShown('Props')"/>
+
 
   `
 }
+
+
+
+
+// showPage(page) {
+//   Object.keys(this.showPages)
+//     .forEach(key => 
+//       this.showPages[key] = false)
+
+//   this.showPages[page] = true
+// }
