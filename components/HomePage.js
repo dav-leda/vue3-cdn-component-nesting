@@ -10,12 +10,12 @@ export default {
       <br>
       <p>
 
-        A diferencia de otros frameworks de frontend como Angular o Svelte,
+        A diferencia de otros frameworks de frontend como React, Angular o Svelte,
         Vue puede ser usado sin necesidad de un <a 
         href="https://sergiodxa.com/articles/que-es-un-bundler-de-js" target="_blank"
         >bundler</a>, simplemente cargando la librería (o, mejor dicho, biblioteca)
         desde un <a href="https://es.wikipedia.org/wiki/Red_de_distribuci%C3%B3n_de_contenidos" target="_blank">CDN</a>
-        en un tag de tipo script dentro del archivo html.
+        script dentro del archivo html.
         <br><br>
         Aunque técnicamente esto también es posible con <strong>React</strong>,
         para poder usar React de esta forma sería necesario pre-compilar el código JSX a HTML y JS nativos,

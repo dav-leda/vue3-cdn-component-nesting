@@ -147,6 +147,7 @@ pre {
   padding: 1rem;
   margin: 1rem;
   border-radius: 5px;
+  font-size: calc(var(--font-size) * 0.6);
 }
 
 .modo-dark {
