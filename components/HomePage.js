@@ -15,9 +15,9 @@ export default {
         href="https://sergiodxa.com/articles/que-es-un-bundler-de-js" target="_blank"
         >bundler</a>, simplemente cargando la librería (o, mejor dicho, biblioteca)
         desde un <a href="https://es.wikipedia.org/wiki/Red_de_distribuci%C3%B3n_de_contenidos" target="_blank">CDN</a>
-        script dentro del archivo html.
+        en un script en un archivo html.
         <br><br>
-        Aunque técnicamente esto también es posible con <strong>React</strong>,
+        Aunque técnicamente esto también es posible con React,
         para poder usar React de esta forma sería necesario pre-compilar el código JSX a HTML y JS nativos,
         mientras que Vue no requiere ningún paso previo de compilación.
         <br><br>
