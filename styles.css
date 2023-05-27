@@ -150,6 +150,21 @@ pre {
   font-size: calc(var(--font-size) * 0.6);
 }
 
+.flex-center {
+  display: flex;
+  
+  align-items: center;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+
 .modo-dark {
   display: flex;
   align-items: center;
