@@ -42,19 +42,12 @@ props: {
 <pre>
 methods: {
   showPage(title) {
-    this.pages.forEach(page => 
-      page.show = page.title === title 
-    )
+    this.pages.forEach(page => page.show = page.title === title)
   },
   isShown(title) {
-    return (
-      this.pages.find(page => 
-        page.title === title
-      )
-    ).show
+    return ( this.pages.find(page => page.title === title) ).show
   }
 },
-
 template: &#96;
 
   &lt;nav&gt;
