@@ -18,7 +18,7 @@ export default {
         en un script dentro del archivo html.
         <br><br>
         Aunque esto también es posible con React,
-        para poder usar React desde una CDN en un archivo `.html` sería necesario pre-compilar el código JSX a HTML y JS nativos,
+        para poder usar React desde una CDN en un archivo html sería necesario pre-compilar el código JSX a HTML y JS nativos,
         mientras que Vue no requiere ningún paso previo de compilación.
         <br><br>
         Sin embargo, cuando estamos usando distintos componentes en nuestra app de Vue
