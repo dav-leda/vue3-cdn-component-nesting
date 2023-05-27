@@ -21,7 +21,8 @@ export default {
         del browser debería actualizarse con el cambio de ruta. Y también debería guardar un historial de navegación.
   
         <br><br>
-        Para poder hacer todo eso es necesario usar <a href="https://router.vuejs.org/" target="_blank">Vue Router</a>.
+        Para poder hacer todo eso es necesario usar <a href="https://router.vuejs.org/" target="_blank">Vue Router</a> 
+        en un proyecto Vue SFC.
 
       </p>
 

@@ -41,7 +41,9 @@ export default {
 
         <pre>
 import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
 import App from './app.js'
+
 createApp(App).mount('#app')
         </pre>
         (Fíjense que es la versión <strong>vue.esm-browser</strong> no la versión <strong>vue.global</strong>).
@@ -59,10 +61,13 @@ createApp(App).mount('#app')
         <pre>
 // app.js
 import NavBar from './components/navBar.js'
+
 export default {
+
   components: {
     NavBar
   },
+
   data: () => ({
     pages: [
       { title: 'Vue CDN', show: true },
@@ -80,7 +85,7 @@ export default {
       De todas formas, el hecho de que Vue pueda ser usado sin un bundler 
       <strong>no significa que siempre deba ser usado sin un bundler</strong>.
       <br><br>
-      De hecho, la forma más usual de usar Vue es con un bundler, como por ejemplo <a href="https://esbuild.github.io/" target="_blank">esbuild</a>,
+      De hecho, la forma más usual de usar Vue es con un bundler, generalmente <a href="https://esbuild.github.io/" target="_blank">esbuild</a>,
       que ya viene incorporado al crear una app de Vue con <a href="https://vitejs.dev/" target="_blank">Vite</a>.
       </p>
     </section>  

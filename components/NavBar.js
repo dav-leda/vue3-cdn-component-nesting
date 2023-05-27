@@ -27,12 +27,8 @@ export default {
         page.show = page.title === title 
       )
     },
-    isShown(title) {
-      return (
-        this.pages.find(page => 
-          page.title === title
-        )
-      ).show
+    isVisible(title) {
+      return ( this.pages.find(page => page.title === title) ).show
     }
   },
   // Para el resaltado de sintaxis de templates literales
@@ -50,10 +46,10 @@ export default {
       <modo-dark/>
     </nav>
 
-    <home-page v-show="isShown('Vue CDN')"/>   
-    <router-page v-show="isShown('Router')"/>
-    <props-page v-show="isShown('Props')"/>
-    <contact-page v-show="isShown('Contacto')"/>
+    <home-page v-show="isVisible('Vue CDN')"/>   
+    <router-page v-show="isVisible('Router')"/>
+    <props-page v-show="isVisible('Props')"/>
+    <contact-page v-show="isVisible('Contacto')"/>
 
   `
 }

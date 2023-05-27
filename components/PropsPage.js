@@ -42,25 +42,26 @@ props: {
 <pre>
 methods: {
   showPage(title) {
-    this.pages.forEach(page => page.show = page.title === title)
+    this.pages.forEach(page => page.show = (page.title === title))
   },
-  isShown(title) {
+  isVisible(title) {
     return ( this.pages.find(page => page.title === title) ).show
   }
 },
 template: &#96;
 
   &lt;nav&gt;
-    &lt;h3 
-      v-for=&quot;page in pages&quot; :key=&quot;page.title&quot;
+
+    &lt;h3 v-for=&quot;page in pages&quot; :key=&quot;page.title&quot; 
       @click=&quot;showPage(page.title)&quot;
     &gt; &#123;&#123;page.title&#125;&#125; &lt;/h3&gt; 
+  
   &lt;/nav&gt;
 
-  &lt;home-page v-show="isShown('Vue CDN')"/&gt;  
-  &lt;router-page v-show="isShown('Router')"/&gt;
-  &lt;props-page v-show="isShown('Props')"/&gt;
-  &lt;contact-page v-show="isShown('Contacto')"/&gt;
+  &lt;home-page v-show="isVisible('Vue CDN')"/&gt;  
+  &lt;router-page v-show="isVisible('Router')"/&gt;
+  &lt;props-page v-show="isVisible('Props')"/&gt;
+  &lt;contact-page v-show="isVisible('Contacto')"/&gt;
 &#96;
 </pre>
     </section>
