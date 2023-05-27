@@ -15,15 +15,15 @@ export default {
         href="https://sergiodxa.com/articles/que-es-un-bundler-de-js" target="_blank"
         >bundler</a>, simplemente cargando la librería (o, mejor dicho, biblioteca)
         desde un <a href="https://es.wikipedia.org/wiki/Red_de_distribuci%C3%B3n_de_contenidos" target="_blank">CDN</a>
-        en un script en un archivo html.
+        en un script dentro del archivo html.
         <br><br>
-        Aunque técnicamente esto también es posible con React,
-        para poder usar React de esta forma sería necesario pre-compilar el código JSX a HTML y JS nativos,
+        Aunque esto también es posible con React,
+        para poder usar React desde una CDN en un archivo `.html` sería necesario pre-compilar el código JSX a HTML y JS nativos,
         mientras que Vue no requiere ningún paso previo de compilación.
         <br><br>
         Sin embargo, cuando estamos usando distintos componentes en nuestra app de Vue
         lo más recomendable es no cargar la librería de Vue (perdón, biblioteca 🤷‍♂️️) en el archivo html.
-        La que se recomienda para esto <a href="https://vuejs.org/guide/quick-start.html#using-vue-from-cdn" target="_blank">en el sitio oficial de Vue</a>
+        Lo que se recomienda para esto <a href="https://vuejs.org/guide/quick-start.html#using-the-es-module-build" target="_blank">en la documentación de Vue</a>
         es usar un script con <strong>type="module"</strong> y el atributo <strong>defer</strong> dentro del <strong>head</strong>:
 
         <pre>
