@@ -25,7 +25,6 @@ data: () => ({
 }),
 </pre>
       <br>
-      <br>
       Y luego el componente hijo de App (en este caso, NavBar) recibe la data como una <strong>prop</strong>:
 
 <pre>
@@ -34,7 +33,8 @@ props: {
 },
 </pre>
       Y puede acceder a estas props en cualquiera de las <strong>options</strong> del componente (methods, computed, etc)
-      usando __this__ (_this.pages_) que hace referencia al componente (ya que cada componente es un objeto de JS).
+      usando <strong>this</strong> (this.pages). Este <strong>this</strong> hace referencia al componente 
+      (ya que cada componente es un objeto de JS).
       </p>
 <pre>
 methods: {
