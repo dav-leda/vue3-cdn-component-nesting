@@ -25,6 +25,7 @@ export default {
       this.pages.forEach( page => 
         page.show = page.title === title 
       )
+      window.scroll(0,0)
     },
     isVisible(title) {
       return ( this.pages.find(page => page.title === title) ).show
