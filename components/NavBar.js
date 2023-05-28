@@ -20,7 +20,6 @@ export default {
     pages: Array
   },
 
-
   methods: {
     showPage(title) {
       this.pages.forEach( page => 

@@ -45,7 +45,7 @@ select {
 }
 
 :root {
-  --primary-color: #302AE6;
+  --primary-color: #2c289f;
   --secondary-color: #536390;
   --font-color: #424242;
   --bg-color: rgb(248, 246, 246);
@@ -81,7 +81,7 @@ p {
   line-height: 1.7;
 }
 
-a {
+a:link {
   color: var(--primary-color);
   text-decoration: none;
   border-bottom: 3px solid transparent;
@@ -159,11 +159,12 @@ pre {
 .mt-1 {
   margin-top: 1rem;
 }
-
 .mt-2 {
   margin-top: 2rem;
 }
-
+.mt-3 {
+  margin-top: 3rem;
+}
 
 .modo-dark {
   display: flex;
