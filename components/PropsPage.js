@@ -9,8 +9,8 @@ export default {
       <h2>Usando props</h2>
       <br>
       <p>
-        Para enviar información desde un componente padre (en realidad podría llamarse componente <strong>madre</strong>, pero la convención es decirle padre 🤷‍♂️️)
-        podemos usar <strong>props</strong>.
+        Para enviar información desde un componente padre (en realidad podría llamarse componente madre, pero la convención es decirle padre 🤷‍♂️️)
+        a un componente hijo podemos usar <strong>props</strong>.
         <br><br>
         Por ejemplo, el componente App contiene un array en el método <strong>data</strong>:
 
@@ -24,20 +24,17 @@ data: () => ({
   ]
 }),
 </pre>
-      Recuerden que si no necesitan usar <strong>this</strong> dentro del método <strong>data</strong>
-      (y la gran mayoría de las veces no es necesario usar this)
-      pueden declararlo con una <strong>arrow function</strong> que retorna un objeto.
-      <br><br>
-      Luego, el componente hijo de App (en este caso, NavBar) recibe la data como una <strong>prop</strong>:
+      <br>
+      <br>
+      Y luego el componente hijo de App (en este caso, NavBar) recibe la data como una <strong>prop</strong>:
 
 <pre>
 props: {
   pages: Array
 },
 </pre>
-      Y puede acceder a estas props en cualquiera de las <strong>options</strong> del componente (methods, computed, etc). 
-      En este caso sí, debe usarse <strong>this</strong> dentro de las options que acceden a las props 
-      (excepto en el template):
+      Y puede acceder a estas props en cualquiera de las <strong>options</strong> del componente (methods, computed, etc)
+      usando __this__ (_this.pages_) que hace referencia al componente (ya que cada componente es un objeto de JS).
       </p>
 <pre>
 methods: {
