@@ -27,7 +27,10 @@ export default {
     },
     isVisible(title) {
       const findPage = this.pages.find(page => page.title === title)
-      return findPage.show
+      // Si la página no existe daría error, porque no tiene la propiedad show:
+      // Uncaught TypeError: findPage is undefined
+      // Para evitar este error usar Optional Chaining con el signo ?
+      return findPage?.show
     }
   },
   // Para el resaltado de sintaxis de templates literales
