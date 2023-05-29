@@ -9,9 +9,7 @@ export default {
       <h2>Usando props</h2>
       <br>
       <p>
-        Para enviar información desde un componente padre (en realidad podría llamarse componente madre, pero la convención es decirle padre 🤷‍♂️️)
-        a un componente hijo podemos usar <strong>props</strong>.
-        <br><br>
+        Para enviar información desde un componente ancestro (o padre) a un componente descendiente (o hijo) podemos usar <strong>props</strong>.
         Por ejemplo, el componente App contiene un array en el método <strong>data</strong>:
 
 <pre>
@@ -24,8 +22,8 @@ data: () => ({
   ]
 }),
 </pre>
-      <br>
-      Y luego el componente hijo de App (en este caso, NavBar) recibe la data como una <strong>prop</strong>:
+      
+  Y luego el componente hijo de App (en este caso, NavBar) recibe la data como una <strong>prop</strong>:
 
 <pre>
 props: {
@@ -42,9 +40,11 @@ methods: {
     this.pages.forEach(page => page.show = (page.title === title))
   },
   isVisible(title) {
-    return ( this.pages.find(page => page.title === title) ).show
+    const findPage = this.pages.find(page => page.title === title)
+    return findPage.show
   }
 },
+
 template: &#96;
 
   &lt;nav&gt;

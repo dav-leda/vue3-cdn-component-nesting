@@ -22,13 +22,12 @@ export default {
 
   methods: {
     showPage(title) {
-      this.pages.forEach( page => 
-        page.show = page.title === title 
-      )
+      this.pages.forEach(page => page.show = page.title === title)
       window.scroll(0,0)
     },
     isVisible(title) {
-      return ( this.pages.find(page => page.title === title) ).show
+      const findPage = this.pages.find(page => page.title === title)
+      return findPage.show
     }
   },
   // Para el resaltado de sintaxis de templates literales

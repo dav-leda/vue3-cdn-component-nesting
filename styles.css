@@ -92,8 +92,13 @@ a:hover {
   border-bottom: 3px solid currentColor;
 }
 
+i {
+  font-style: italic;
+}
+
 section {
-  max-width: calc(var(--font-size) * 20);
+  width: calc(var(--font-size) * 30);
+  max-width: 1000px;
   margin: 10rem auto;
 }
 
@@ -144,8 +149,8 @@ nav > h3:hover {
 
 pre {
   background-color: rgba(0,0,0,0.05);
-  padding: 1rem;
-  margin: 1rem;
+  padding: 0.5rem 2rem;
+  margin: 1rem auto;
   border-radius: 5px;
   font-size: calc(var(--font-size) * 0.6);
 }
