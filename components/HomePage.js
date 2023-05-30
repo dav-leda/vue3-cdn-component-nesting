@@ -19,7 +19,7 @@ export default {
         <br><br>
         Aunque esto también es posible con React,
         para poder usar React desde una CDN sería necesario compilar el código JSX a JavaScript nativo,
-        mientras que Vue no requiere ningún tipo de compilación. Lo único que hay que hacer es cargar la librería
+        mientras que Vue no requiere de ningún tipo de compilación. Lo único que hay que hacer es cargar la librería
         (perdón, biblioteca 😬️) en un <strong>script</strong>:
 <pre>
 
