@@ -5,6 +5,7 @@ import PropsPage from './PropsPage.js'
 import RouterPage from './RouterPage.js'
 import ContactPage from './ContactPage.js'
 import ModoDark from './ModoDark.js'
+import StatePage from './StatePage.js'
 
 export default {
 
@@ -13,7 +14,8 @@ export default {
     PropsPage, 
     RouterPage,
     ContactPage,
-    ModoDark
+    ModoDark,
+    StatePage
   },
 
   props: {
@@ -48,7 +50,8 @@ export default {
       <modo-dark/>
     </nav>
 
-    <home-page v-show="isVisible('Vue CDN')"/>   
+    <home-page v-show="isVisible('Vue CDN')"/>
+    <state-page v-show="isVisible('State')"/>      
     <router-page v-show="isVisible('Router')"/>
     <props-page v-show="isVisible('Props')"/>
     <contact-page v-show="isVisible('Contacto')"/>

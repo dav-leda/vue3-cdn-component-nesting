@@ -8,10 +8,10 @@ export default {
 
       <h2>Usando props</h2>
       <br>
-      <p>
+<p>
         Para enviar información desde un componente ancestro (o padre) a un componente descendiente (o hijo) podemos usar <strong>props</strong>.
         Por ejemplo, el componente App contiene un array en el método <strong>data</strong>:
-
+</p>
 <pre>
 data: () => ({
   pages: [
@@ -22,18 +22,26 @@ data: () => ({
   ]
 }),
 </pre>
-      
+<p>
+
   Y luego el componente hijo de App (en este caso, NavBar) recibe la data como una <strong>prop</strong>:
+
+</p>     
 
 <pre>
 props: {
   pages: Array
 },
 </pre>
-      Y puede acceder a estas props en cualquiera de las <strong>options</strong> del componente (methods, computed, etc)
-      usando <strong>this</strong> (this.pages). Este <strong>this</strong> hace referencia al componente 
-      (ya que cada componente es un objeto de JS).
-      </p>
+
+<p>
+
+  Y puede acceder a estas props en cualquiera de las <strong>options</strong> del componente (methods, computed, etc)
+  usando <strong>this</strong> (this.pages). Este <strong>this</strong> hace referencia al componente 
+  (ya que cada componente es un objeto de JS).
+
+</p>
+      
 <pre>
 methods: {
   showPage(title) {
