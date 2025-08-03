@@ -7,6 +7,8 @@ import ContactPage from './ContactPage.js'
 import ModoDark from './ModoDark.js'
 import StatePage from './StatePage.js'
 
+import { someStore } from '../../state/someStore.js'
+
 export default {
 
   components: {
@@ -21,6 +23,10 @@ export default {
   props: {
     pages: Array
   },
+
+  data: () => ({
+    someStore
+  }),
 
   methods: {
     showPage(title) {
@@ -42,11 +48,14 @@ export default {
   template: /*html*/ `
 
     <nav>
+      <p>State: {{ JSON.stringify(someStore) }}</p>
+      
       <h3 
         v-for="page in pages" :key="page.title"
         @click="showPage(page.title)"
       > {{ page.title }} </h3>
       
+
       <modo-dark/>
     </nav>
 

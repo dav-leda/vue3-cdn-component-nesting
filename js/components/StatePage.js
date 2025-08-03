@@ -1,12 +1,18 @@
 
 
-import someStore from "../../state/someStore.js"
+import { someStore } from "../../state/someStore.js"
 
 export default {
 
   data: () => ({
     someStore
   }),
+
+  methods: {
+    mutateState() {
+      this.someStore.someState.someNumber++
+    }
+  },
 
   template: /*html*/ `
 
@@ -20,6 +26,8 @@ export default {
       Al cambiar algo en el objeto cambia el estado
       y los componentes vuelven a renderizar con el nuevo estado.
     </p>
+
+    <button @click="mutateState()">Increment</button>
   
     <pre>{{ JSON.stringify(someStore) }}</pre>
   </section>
