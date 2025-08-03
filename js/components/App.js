@@ -1,5 +1,5 @@
 
-import NavBar from './components/NavBar.js'
+import NavBar from './NavBar.js'
 
 export default {
 
@@ -9,11 +9,11 @@ export default {
 
   data: () => ({
     pages: [
-      { title: 'Vue CDN', show: false },
+      { title: 'Vue CDN', show: true },
       { title: 'Contacto', show: false },
       { title: 'Props', show: false },
       { title: 'Router', show: false },
-      { title: 'State', show: true }
+      { title: 'State', show: false }
     ]
   }),
 }

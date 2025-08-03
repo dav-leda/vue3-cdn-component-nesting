@@ -1,6 +1,6 @@
 
 
-import someStore from "../state/someStore.js"
+import someStore from "../../state/someStore.js"
 
 export default {
 
@@ -23,7 +23,6 @@ export default {
   
     <pre>{{ JSON.stringify(someStore) }}</pre>
   </section>
-  
   
   `
 }
